@@ -45,6 +45,7 @@ input[type="email"] {
   padding-right: 130px;
   border: 1px solid hsl(231, 7%, 60%);
   border-radius: 0.5rem;
+  font-weight: 700;
 }
 button[type="submit"] {
   color: white;
