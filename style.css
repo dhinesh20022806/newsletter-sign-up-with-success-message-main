@@ -1,0 +1,174 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 1.5rem;
+  height: 600px;
+  width: 800px;
+  padding: 20px;
+}
+ul {
+  list-style: url(./assets/images/icon-list.svg);
+}
+ul li {
+  margin-top: 10px;
+  padding: 5px;
+  /* background:red; */
+}
+ul li:first-child {
+  margin-top: 0;
+}
+h1 {
+  font-size: 2.5rem;
+  color: hsl(234, 29%, 20%);
+}
+span{
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 0 30px;
+}
+input[type="email"] {
+  padding: 20px;
+  padding-right: 130px;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 0.5rem;
+}
+button[type="submit"] {
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 0.5rem;
+  border: 1px solid hsl(234, 29%, 20%);
+  padding: 20px 70px;
+}
+.error-mesage {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+}
+.error {
+  color: hsl(4, 100%, 67%);
+}
+#errorbox {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsl(4, 88%, 77%) !important ;
+  color: hsl(4, 100%, 67%) !important;
+}
+.hidden {
+  visibility: hidden;
+}
+.pop-up {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-radius: 1.4rem;
+  padding: 30px;
+}
+.pop-up img {
+  height: 80%;
+}
+.pop-up button {
+  padding: 20px 130px;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid hsl(234, 29%, 20%);
+  background-color:hsl(234, 29%, 20%) ;
+}
+.pop-up > button:hover{
+  background-image: linear-gradient(
+    to right,
+    hsl(330, 95%, 45%),
+    hsl(4, 100%, 67%)
+  );
+  border: 1px solid hsl(4, 100%, 67%);
+
+}
+button[type="submit"]:hover {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-image: linear-gradient(
+    to right,
+    hsl(330, 95%, 45%),
+    hsl(4, 100%, 67%)
+  );
+}
+@media (max-width: 500px) {
+  body {
+    background-color: white;
+    width: fit-content;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: white;
+    border-radius: 0;
+    height: 90vh;
+    width: 463px;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  #image {
+    width: 450px;
+  }
+
+  #image img {
+    object-fit: cover;
+    width: 450px;
+  }
+
+  .sign-up {
+    padding-left: 40px;
+  }
+  input[type="email"] {
+    padding-right: 170px;
+  }
+  button[type="submit"] {
+    padding: 20px 105px;
+    font-size: 0.7rem;
+    text-align: center;
+  }.pop-up{
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+    justify-content: center;
+    padding :0, 0, 0, 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .pop-up img {
+    height: 60px;
+  }
+  .pop-up > button{
+   position: absolute;
+   bottom: 40px;
+  }
+}
