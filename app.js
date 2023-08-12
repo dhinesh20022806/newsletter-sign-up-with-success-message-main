@@ -8,26 +8,22 @@ const popup = document.querySelector("#pop-up");
 const dismiss = document.querySelector(".pop-up button");
 
 function valudiation(result) {
-    if (result) {
-      error.textContent = "";
-      signup.classList.add("hidden");
-      popup.classList.remove("hidden");
-      emailMessage.textContent = form.email1.value;
-      form.email1.value = "";
-      email.setAttribute("id", "");
-    } else {
-      error.textContent = "valid email required";
-      email.setAttribute("id", "errorbox");
-    }
-    
+  if (result) {
+    error.textContent = "";
+    signup.classList.add("hidden");
+    popup.classList.remove("hidden");
+    emailMessage.textContent = form.email1.value;
+    form.email1.value = "";
+    email.setAttribute("id", "");
+  } else {
+    error.textContent = "valid email required";
+    email.setAttribute("id", "errorbox");
+  }
 }
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   valudiation(pattern.test(form.email1.value));
-  
 });
-
-console.log(signup.classList);
 
 dismiss.addEventListener("click", () => {
   signup.classList.remove("hidden");
@@ -35,15 +31,12 @@ dismiss.addEventListener("click", () => {
 });
 
 form.email1.addEventListener("keyup", (e) => {
-  if (pattern.test(e.target.value)){
-      error.textContent = " ";
-      email.setAttribute("id", "");
-      
-}
-else{
-      error.textContent = "valid email required";
-      email.setAttribute("id", "errorbox");
-
+  if (pattern.test(e.target.value)) {
+    error.textContent = " ";
+    email.setAttribute("id", "");
+  } else {
+    error.textContent = "valid email required";
+    email.setAttribute("id", "errorbox");
   }
 });
 
