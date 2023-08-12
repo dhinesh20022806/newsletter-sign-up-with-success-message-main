@@ -1,6 +1,6 @@
 const form = document.querySelector(".form");
 const email = document.querySelector("input[type=email]");
-const pattern = /^[a-zA-Z0-9]*@[a-z]*\.com$/;
+const pattern = /^[a-zA-Z0-9]*@gmail\.com$/;
 const error = document.querySelector(".error");
 const emailMessage = document.querySelector("span");
 const signup = document.querySelector("#sign-up");
